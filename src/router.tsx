@@ -10,6 +10,8 @@ export const getRouter = () => {
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
+    // "/bakerz-Bite" on GitHub Pages, "/" everywhere else
+    basepath: import.meta.env.BASE_URL.replace(/\/$/, "") || "/",
   });
 
   return router;
